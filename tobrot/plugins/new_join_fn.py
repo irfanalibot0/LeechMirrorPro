@@ -28,7 +28,7 @@ async def start_fn(client, message):
             ),
         )
     elif message.from_user.id in AUTH_CHANNEL:
-        await message.reply_text(f"Hey {message.from_user.first_name}!\nI'm alive.")
+        await message.reply_text(f"Hey {message.from_user.first_name}!I am the leech bot of Telegram. You can also leech torrent links.\n\nYou can use me to Download any direct link & any Youtube-Dl Supported link to Telegram")
         # leave chat
         await client.leave_chat(chat_id=message.chat.id, delete=True)
     # delete all other messages, except for AUTH_CHANNEL
