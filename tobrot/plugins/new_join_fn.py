@@ -6,29 +6,20 @@ from tobrot import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-async def start_fn(client, message):
-    if message.chat.type == "private":
-        name = message.from_user.first_name
-        msg = f"Hey {name}!\n"
-        msg += "I am a leecher bot..\n"
-        msg += "If you want to use me you have to join <a href='https://t.me/torrentleechgs'>TorrentLeech</a>!"
-        msg += "\n\nThank You😊"
+async def new_join_f(client, message):
+    chat_type = message.chat.type
+    if chat_type != "private":
         await message.reply_text(
-            msg,
+            f"""<b>🙋🏻‍♂️ Hello dear!\n\n This Is A Leech Bot .This Chat Is Not Supposed To Use Me</b>\n\n<b>Current CHAT ID: <code>{message.chat.id}</code>""",
             parse_mode="html",
-            quote=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            "TorrentLeech", url="https://t.me/torrentleechgs"
-                        )
+                        InlineKeyboardButton('Channel', url='https://t.me/MaxxBots')
                     ]
                 ]
-            ),
-        )
-    elif message.from_user.id in AUTH_CHANNEL:
-        await message.reply_text(f"Hey {message.from_user.first_name}!I am the leech bot of Telegram. You can also leech torrent links.\n\nYou can use me to Download any direct link & any Youtube-Dl Supported link to Telegram")
+               )
+            )
         # leave chat
         await client.leave_chat(chat_id=message.chat.id, delete=True)
     # delete all other messages, except for AUTH_CHANNEL
