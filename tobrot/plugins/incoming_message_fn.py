@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<b>Hey Dude !</b>\n\n <b>Reply with Direct /Torrent Link</b>")
+        await i_m_sefg.edit("<code>Reply with Direct Torrent Link</code>\n\n<b>/leech</b><code>:This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]</code>\n\n<b>Owner:- @Irfan_Ali_786</b>")
         return
     if dl_url is not None:
 
