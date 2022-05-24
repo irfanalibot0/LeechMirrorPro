@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<code>Reply with Direct Torrent Link</code>\n\n<b>/leech</b><code>:This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]</code>\n\n<b>/mirror</b><code>: To upload cloud and generate index fast speed link.</code>\n\n<b>BOT Owner:- @Irfan_Ali_786</b>")
+        await i_m_sefg.edit("<code>Reply with Direct Torrent Link</code>\n\n<b>/Leech</b><code>:This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]</code>\n\n<b>/Mirror</b><code>: To upload cloud and generate index fast speed link.</code>\n\n<b>BOT Owner:- @Irfan_Ali_786</b>")
         return
     if dl_url is not None:
 
@@ -135,7 +135,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            f"**FCUK**! wat have you entered. \n<b>API Error</b>: {cf_name}"
+            f"**SORRY**! what have you entered. \n<b>API Error</b>: {cf_name}"
         )
 
 
@@ -160,7 +160,7 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>🐈 Oops Reply To YTDL Supported Link.</b>")
+        await i_m_sefg.edit("<b>/YouTube</b><code>: Send any Youtube-Dl and Other Supported link. To Upload Telegram.</code>\n\n<b>/Watch</b><code>: Send any Youtube-Dl and Other Supported link. : To upload cloud and generate index fast speed link.</code>/n/n<b>BOT Owner:- @Irfan_Ali_786</b>")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("<b>Getting Available Formate</b>...")
@@ -190,7 +190,7 @@ async def incoming_youtube_dl_f(client, message):
             await i_m_sefg.edit_text(text=text_message, reply_markup=reply_markup)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered.\n"
+            "**SORRY**! what have you entered.\n"
             f"<b>API Error</b>: {cf_name}"
         )
 
@@ -222,7 +222,7 @@ async def g_yt_playlist(client, message):
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
-        await message.reply_text("<b>YouTube playlist link only 🙄</b>", quote=True)
+        await message.reply_text("<b>Send YouTube playlist link only 🙄</b>", quote=True)
 
  #
 
