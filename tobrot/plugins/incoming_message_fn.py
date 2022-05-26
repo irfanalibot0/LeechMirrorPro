@@ -79,7 +79,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("<code>Reply with Direct Torrent Link</code>\n\n<b>/Leech</b><code>:This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]</code>\n\n<b>/Mirror</b><code>: To upload cloud and generate index fast speed link.</code>\n\n<b>BOT Owner:- @Irfan_Ali_786</b>")
+        await i_m_sefg.edit("<code>Reply with Direct Torrent Link</code>\n\n<b>/leech</b><code>:This command should be used as reply to a magnetic link, a torrent link, or a direct link. [this command will SPAM the chat and send the downloads a seperate files, if there is more than one file, in the specified torrent]</code>\n\n<b>/mirror</b><code>: To upload cloud and generate index fast speed link.</code>\n\n<b>BOT Owner:- @Irfan_Ali_786</b>")
         return
     if dl_url is not None:
 
@@ -160,7 +160,7 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>/YouTube</b><code>: Send any Youtube-Dl and Other Supported link. To Upload Telegram.</code>\n\n<b>/Watch</b><code>: Send any Youtube-Dl and Other Supported link. : To upload cloud and generate index fast speed link.</code>/n/n<b>BOT Owner:- @Irfan_Ali_786</b>")
+        await i_m_sefg.edit("<b>/leechwatch</b><code>: Send any Youtube-Dl and Other Supported link. To Upload Telegram.</code>\n\n<b>/watch</b><code>: Send any Youtube-Dl and Other Supported link. : To upload cloud and generate index fast speed link.</code>\n\n<b>BOT Owner:- @Irfan_Ali_786</b>")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("<b>Getting Available Formate</b>...")
